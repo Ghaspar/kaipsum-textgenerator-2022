@@ -5,14 +5,14 @@ type DataProps = {
 };
 
 
-export default function Header() {
+export default function Content() {
 
   return (
    <>
         <main>
             <div className="container">
                 <div className="row">
-                    
+
                 </div>
             </div>
         </main>
