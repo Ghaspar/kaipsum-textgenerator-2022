@@ -6,9 +6,19 @@ type Inputs = {
 };
 
 export default function Content() {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = data => {
-        console.log(data)
+
+    const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
+    const onSubmit: SubmitHandler<Inputs> = async data => {
+        const text = await fetch('/api/generator',{
+            method: 'POST',
+            body: JSON.stringify(data)
+          }).then(response=>response.json()).then(data=>{
+            if(data){
+                const phrases = JSON.parse(data.phrases)
+                // const maxPhrases = Math.floor(Math.random() * phrases.length) + 1
+                console.log(phrases);
+            }
+          })
     };
     
     return (
