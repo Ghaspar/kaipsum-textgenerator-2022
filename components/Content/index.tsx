@@ -36,7 +36,7 @@ export default function Content() {
                             <div className="col-lg-3">
                                 <fieldset>
                                     <label className="pb-2 d-block text-center" htmlFor="setParagraphs">how paragraphs do you want?</label>
-                                    <input className="form-control" type="number" {...register("paragraphs")} />
+                                    <input className="form-control" type="number" disabled {...register("paragraphs")} />
                                 </fieldset>
                             </div>
                         </div>
