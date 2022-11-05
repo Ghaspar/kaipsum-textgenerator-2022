@@ -12,7 +12,10 @@ export default function Content() {
         <main>
             <div className="container">
                 <div className="row">
+                    <form>
+                        <textarea></textarea>
 
+                    </form>
                 </div>
             </div>
         </main>
