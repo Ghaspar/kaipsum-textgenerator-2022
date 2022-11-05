@@ -49,7 +49,7 @@ function capitalizeFirstLetter(getLetter:string) {
 }
 
 function geneteraParagraph(getData:any){
-    const limit = 425;
+    const limit = 20;
     let paragraph = "";
     for (let i = 0; i < limit; i++) {
         paragraph += getData[Math.floor(Math.random() * getData.length) + 1]+" ";
